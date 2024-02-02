@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet">
+    <title>Jeu du plus ou moins</title>
+  </head>
+  <body class="container flex center items-center justify-center w-screen h-screen max-h-full">
+    <div id="startDiv" class="flex flex-col items-center justify-center">
+      <h1 class="p-10">Jeu du plus ou moins</h1>
+      <p class="p-5">Vous devez retrouver un nombre entre <span id="minNumberSpan"></span> et <span id="maxNumberSpan"></span> généré aléatoirement en un minimum de tentatives.</p>
+      <button id="startButton">Start</button>
+    </div>
+    <div id="gameDiv" class="hidden flex flex-col justify-center items-center">
+      <div class="flex flex-col w-screen justify-center items-center">
+        <div>Nombre de tentative(s) : <span id="attemptDiv"></span></div>
+        <h2>Votre proposition :</h2>
+        <form id="propositionForm" class="flex items-center"><input id="playerProposition" name="playerProposition" type="text" class="m-5"><button id="submitButton">Valider</button></form>
+      </div>
+      <div>
+        <div id="errorDiv" class="flex justify-center"></div>
+        <div id="limiteDiv" class="flex justify-center items-center"></div>
+        <div id="maxAndMinPlayed" class="flex justify-evenly"></div>
+      </div>
+      <button id="restartButton">Recommencer</button>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
